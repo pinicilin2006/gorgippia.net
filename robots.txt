@@ -1,0 +1,22 @@
+User-Agent: *
+Host: gorgippia.net
+Disallow: /adm
+Disallow: /cache
+Disallow: /classes
+Disallow: /docs
+Disallow: /download
+Allow:    /download/file.php
+Disallow: /files
+Disallow: /includes
+Disallow: /install
+Disallow: /language
+Disallow: /stk
+Disallow: /store
+Disallow: /mcp.php
+Disallow: /posting.php
+Disallow: /report.php
+Disallow: /viewtopic.php?*&view=print
+Disallow: /memberlist.php
+Clean-param: sid /
+Clean-param: f&hilit /viewtopic.php
+Crawl-delay: 10

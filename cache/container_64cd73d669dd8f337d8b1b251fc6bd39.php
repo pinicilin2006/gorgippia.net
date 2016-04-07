@@ -198,6 +198,9 @@ class phpbb_cache_container extends Symfony\Component\DependencyInjection\Contai
             'symfony_request' => 'getSymfonyRequestService',
             'template' => 'getTemplateService',
             'template_context' => 'getTemplateContextService',
+            'uloginteam.ulogin.controller' => 'getUloginteam_Ulogin_ControllerService',
+            'uloginteam.ulogin.listener' => 'getUloginteam_Ulogin_ListenerService',
+            'uloginteam.ulogin.model' => 'getUloginteam_Ulogin_ModelService',
             'user' => 'getUserService',
             'user_loader' => 'getUserLoaderService',
             'version_helper' => 'getVersionHelperService',
@@ -1246,6 +1249,7 @@ class phpbb_cache_container extends Symfony\Component\DependencyInjection\Contai
     {
         $this->services['dispatcher'] = $instance = new \phpbb\event\dispatcher($this);
 
+        $instance->addSubscriberService('uloginteam.ulogin.listener', 'uloginteam\\ulogin\\event\\listener');
         $instance->addSubscriberService('kernel_request_subscriber', 'phpbb\\event\\kernel_request_subscriber');
         $instance->addSubscriberService('kernel_exception_subscriber', 'phpbb\\event\\kernel_exception_subscriber');
         $instance->addSubscriberService('kernel_terminate_subscriber', 'phpbb\\event\\kernel_terminate_subscriber');
@@ -2505,6 +2509,45 @@ class phpbb_cache_container extends Symfony\Component\DependencyInjection\Contai
     protected function getTemplateContextService()
     {
         return $this->services['template_context'] = new \phpbb\template\context();
+    }
+
+    /**
+     * Gets the 'uloginteam.ulogin.controller' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return \uloginteam\ulogin\controller\main A uloginteam\ulogin\controller\main instance.
+     */
+    protected function getUloginteam_Ulogin_ControllerService()
+    {
+        return $this->services['uloginteam.ulogin.controller'] = new \uloginteam\ulogin\controller\main($this->get('uloginteam.ulogin.model'), $this->get('auth'), $this->get('cache'), $this->get('config'), $this->get('dbal.conn'), $this->get('request'), $this->get('template'), $this->get('user'), $this->get('controller.helper'), $this->get('plupload'), './../', 'php');
+    }
+
+    /**
+     * Gets the 'uloginteam.ulogin.listener' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return \uloginteam\ulogin\event\listener A uloginteam\ulogin\event\listener instance.
+     */
+    protected function getUloginteam_Ulogin_ListenerService()
+    {
+        return $this->services['uloginteam.ulogin.listener'] = new \uloginteam\ulogin\event\listener($this->get('config'), $this->get('template'), $this->get('user'), $this->get('request'), './../', 'php');
+    }
+
+    /**
+     * Gets the 'uloginteam.ulogin.model' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return \uloginteam\ulogin\core\model A uloginteam\ulogin\core\model instance.
+     */
+    protected function getUloginteam_Ulogin_ModelService()
+    {
+        return $this->services['uloginteam.ulogin.model'] = new \uloginteam\ulogin\core\model($this->get('config'), $this->get('dbal.conn'), $this->get('auth'), $this->get('user'), './../', 'php', 'forum_');
     }
 
     /**

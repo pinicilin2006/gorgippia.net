@@ -10,11 +10,12 @@ span.imageset {
 }
 
 /* Global imageset items */
-.imageset.site_logo {
+/*.imageset.site_logo {
 	background-image: url("./images/site_logo.png");
 	padding-left: 224px;
 	padding-top: 67px;
 }
+*/
 .imageset.forum_link {
 	background-image: url("./images/forum_link.gif");
 	padding-left: 27px;
