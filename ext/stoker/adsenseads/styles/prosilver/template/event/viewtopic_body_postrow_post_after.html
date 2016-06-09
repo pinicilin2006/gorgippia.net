@@ -1,0 +1,36 @@
+<!-- IF U_SEE_ADS and ENABLE_TOPICFIRST_AD -->
+<!-- IF (ENABLE_ADSENSE_TESTMODE and U_ACP) or not ENABLE_ADSENSE_TESTMODE -->
+<!-- IF postrow.S_FIRST_ROW -->
+<div class="panel viewtopicads">
+<div class="adloader">
+		{TOPICFIRST_AD_TEXT}
+</div>
+</div>
+<hr class="divider" />
+<!-- ENDIF -->
+<!-- ENDIF -->
+<!-- ENDIF -->
+<!-- IF U_SEE_ADS and ENABLE_TOPICLAST_AD -->
+<!-- IF (ENABLE_ADSENSE_TESTMODE and U_ACP) or not ENABLE_ADSENSE_TESTMODE -->
+<!-- IF postrow.S_ROW_COUNT > 1 and postrow.S_LAST_ROW -->
+<div class="panel viewtopicads">
+<div class="adloader">
+		{TOPICLAST_AD_TEXT}
+</div>
+</div>
+<hr class="divider" />
+<!-- ENDIF -->
+<!-- ENDIF -->
+<!-- ENDIF -->
+<!-- IF U_SEE_ADS and ENABLE_TOPICMID_AD -->
+<!-- IF (ENABLE_ADSENSE_TESTMODE and U_ACP) or not ENABLE_ADSENSE_TESTMODE -->
+<!-- IF postrow.S_ROW_COUNT == 4 and not postrow.S_LAST_ROW -->
+<div class="panel viewtopicads">
+<div class="adloader">
+		{TOPICMID_AD_TEXT}
+</div>
+</div>
+<hr class="divider" />
+<!-- ENDIF -->
+<!-- ENDIF -->
+<!-- ENDIF -->

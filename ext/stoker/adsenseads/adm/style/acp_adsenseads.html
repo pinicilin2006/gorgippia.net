@@ -1,0 +1,180 @@
+<!-- INCLUDE overall_header.html -->
+
+<h1>{L_ACP_ADSENSEADS}</h1>
+
+<p>{L_ACP_ADSENSEADS_DONATE}</p>
+
+<p>{L_ACP_ADSENSEADS_EXPHEAD}</p>
+
+<form id="select_victim" method="post" action="{U_ACTION}">
+
+   <fieldset>
+      <legend>{L_ACP_ADSENSEADS_HEAD1}</legend>
+      <dl>
+         <dt><label for="enable_adsense_testmode">{L_ACP_ENABLE_ADSENSE_TESTMODE}{L_COLON}</label><br /><span>{L_ACP_ENABLE_ADSENSE_TESTMODE_EXPLAIN}</span></dt>
+         <dd>
+            <label><input type="radio" class="radio" name="enable_adsense_testmode" id="enable_adsense_testmode" value="1"<!-- IF ENABLE_ADSENSE_TESTMODE --> checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+            <label><input type="radio" class="radio" name="enable_adsense_testmode" value="0"<!-- IF not ENABLE_ADSENSE_TESTMODE --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+         </dd>
+      </dl>
+      <dl>
+         <dt><label for="enable_adblock_warn">{L_ACP_ENABLE_ADBLOCK_WARN}{L_COLON}</label><br /><span>{L_ACP_ENABLE_ADBLOCK_WARN_EXPLAIN}</span></dt>
+         <dd>
+            <label><input type="radio" class="radio" name="enable_adblock_warn" id="enable_adblock_warn" value="1"<!-- IF ENABLE_ADBLOCK_WARN --> checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+            <label><input type="radio" class="radio" name="enable_adblock_warn" value="0"<!-- IF not ENABLE_ADBLOCK_WARN --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+         </dd>
+      </dl>
+      <dl>
+         <dt><label for="adblock_warn_text">{L_ACP_ADBLOCK_WARN_TEXT}{L_COLON}</label><br /><span>{L_ACP_ADBLOCK_WARN_TEXT_EXPLAIN}</span></dt>
+         <dd>
+            <textarea name="adblock_warn_text" id="adblock_warn_text" rows="6" cols="30" style="width: 95%;" onselect="storeCaret(this);" onclick="storeCaret(this);" onkeyup="storeCaret(this);" onfocus="initInsertions();" data-bbcode="true">{ADBLOCK_WARN_TEXT}</textarea>
+         </dd>
+      </dl>
+	  <dl>
+         <dt><label for="enable_total_topic_block">{L_ACP_ENABLE_TOTAL_TOPIC_BLOCK}{L_COLON}</label><br /><span>{L_ACP_ENABLE_TOTAL_TOPIC_BLOCK_EXPLAIN}</span></dt>
+         <dd>
+            <label><input type="radio" class="radio" name="enable_total_topic_block" id="enable_total_topic_block" value="1"<!-- IF ENABLE_TOTAL_TOPIC_BLOCK --> checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+            <label><input type="radio" class="radio" name="enable_total_topic_block" value="0"<!-- IF not ENABLE_TOTAL_TOPIC_BLOCK --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+         </dd>
+      </dl>
+      <dl>
+         <dt><label for="total_topic_block_text">{L_ACP_TOTAL_TOPIC_BLOCK_TEXT}{L_COLON}</label><br /><span>{L_ACP_TOTAL_TOPIC_BLOCK_TEXT_EXPLAIN}</span></dt>
+         <dd>
+            <textarea name="total_topic_block_text" id="total_topic_block_text" rows="6" cols="30" style="width: 95%;" onselect="storeCaret(this);" onclick="storeCaret(this);" onkeyup="storeCaret(this);" onfocus="initInsertions();" data-bbcode="true">{TOTAL_TOPIC_BLOCK_TEXT}</textarea>
+         </dd>
+      </dl>
+	  <dl>
+         <dt><label for="enable_adblock_detector">{L_ACP_ENABLE_ADBLOCK_DETECTOR}{L_COLON}</label><br /><span>{L_ACP_ENABLE_ADBLOCK_DETECTOR_EXPLAIN}</span></dt>
+         <dd>
+            <label><input type="radio" class="radio" name="enable_adblock_detector" id="enable_adblock_detector" value="1"<!-- IF ENABLE_ADBLOCK_DETECTOR --> checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+            <label><input type="radio" class="radio" name="enable_adblock_detector" value="0"<!-- IF not ENABLE_ADBLOCK_DETECTOR --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+         </dd>
+      </dl>
+      <dl>
+         <dt><label for="adblock_ad_text">{L_ACP_ADBLOCK_AD_TEXT}{L_COLON}</label><br /><span>{L_ACP_ADBLOCK_AD_TEXT_EXPLAIN}</span></dt>
+         <dd>
+			<textarea name="adblock_ad_text" id="adblock_ad_text" rows="6" cols="30" style="width: 95%;" onselect="storeCaret(this);" onclick="storeCaret(this);" onkeyup="storeCaret(this);" onfocus="initInsertions();" data-bbcode="true">{ADBLOCK_AD_TEXT}</textarea>
+         </dd>
+      </dl>
+      <dl>
+         <dt><label for="enable_noscript_warn">{L_ACP_ENABLE_NOSCRIPT_WARN}{L_COLON}</label><br /><span>{L_ACP_ENABLE_NOSCRIPT_WARN_EXPLAIN}</span></dt>
+         <dd>
+            <label><input type="radio" class="radio" name="enable_noscript_warn" id="enable_noscript_warn" value="1"<!-- IF ENABLE_NOSCRIPT_WARN --> checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+            <label><input type="radio" class="radio" name="enable_noscript_warn" value="0"<!-- IF not ENABLE_NOSCRIPT_WARN --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+         </dd>
+      </dl>
+      <dl>
+         <dt><label for="noscript_warn_text">{L_ACP_NOSCRIPT_WARN_TEXT}{L_COLON}</label><br /><span>{L_ACP_NOSCRIPT_WARN_TEXT_EXPLAIN}</span></dt>
+         <dd>
+			<textarea name="noscript_warn_text" id="noscript_warn_text" rows="6" cols="30" style="width: 95%;" onselect="storeCaret(this);" onclick="storeCaret(this);" onkeyup="storeCaret(this);" onfocus="initInsertions();" data-bbcode="true">{NOSCRIPT_WARN_TEXT}</textarea>
+         </dd>
+      </dl>
+   </fieldset>
+
+   <fieldset>
+      <legend>{L_ACP_ADSENSEADS_HEAD2}</legend>
+      <dl>
+         <dt><label for="enable_header_ad">{L_ACP_ENABLE_HEADER_AD}{L_COLON}</label><br /><span>{L_ACP_ENABLE_HEADER_AD_EXPLAIN}</span></dt>
+         <dd>
+            <label><input type="radio" class="radio" name="enable_header_ad" id="enable_header_ad" value="1"<!-- IF ENABLE_HEADER_AD --> checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+            <label><input type="radio" class="radio" name="enable_header_ad" value="0"<!-- IF not ENABLE_HEADER_AD --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+         </dd>
+      </dl>
+      <dl>
+         <dt><label for="header_ad_text">{L_ACP_HEADER_AD_TEXT}{L_COLON}</label><br /><span>{L_ACP_HEADER_AD_TEXT_EXPLAIN}</span></dt>
+         <dd>
+			<textarea name="header_ad_text" id="header_ad_text" rows="6" cols="30" style="width: 95%;" onselect="storeCaret(this);" onclick="storeCaret(this);" onkeyup="storeCaret(this);" onfocus="initInsertions();" data-bbcode="true">{HEADER_AD_TEXT}</textarea>
+         </dd>
+      </dl>
+   </fieldset>
+   
+   <fieldset>
+      <legend>{L_ACP_ADSENSEADS_HEAD3}</legend>
+      <dl>
+         <dt><label for="enable_footer_ad">{L_ACP_ENABLE_FOOTER_AD}{L_COLON}</label><br /><span>{L_ACP_ENABLE_FOOTER_AD_EXPLAIN}</span></dt>
+         <dd>
+            <label><input type="radio" class="radio" name="enable_footer_ad" id="enable_footer_ad" value="1"<!-- IF ENABLE_FOOTER_AD --> checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+            <label><input type="radio" class="radio" name="enable_footer_ad" value="0"<!-- IF not ENABLE_FOOTER_AD --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+         </dd>
+      </dl>
+      <dl>
+         <dt><label for="footer_ad_text">{L_ACP_FOOTER_AD_TEXT}{L_COLON}</label><br /><span>{L_ACP_FOOTER_AD_TEXT_EXPLAIN}</span></dt>
+         <dd>
+			<textarea name="footer_ad_text" id="footer_ad_text" rows="6" cols="30" style="width: 95%;" onselect="storeCaret(this);" onclick="storeCaret(this);" onkeyup="storeCaret(this);" onfocus="initInsertions();" data-bbcode="true">{FOOTER_AD_TEXT}</textarea>
+         </dd>
+      </dl>
+   </fieldset>
+   
+   <fieldset>
+      <legend>{L_ACP_ADSENSEADS_HEAD4}</legend>
+      <dl>
+         <dt><label for="enable_topicfirst_ad">{L_ACP_ENABLE_TOPICFIRST_AD}{L_COLON}</label><br /><span>{L_ACP_ENABLE_TOPICFIRST_AD_EXPLAIN}</span></dt>
+         <dd>
+            <label><input type="radio" class="radio" name="enable_topicfirst_ad" id="enable_topicfirst_ad" value="1"<!-- IF ENABLE_TOPICFIRST_AD --> checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+            <label><input type="radio" class="radio" name="enable_topicfirst_ad" value="0"<!-- IF not ENABLE_TOPICFIRST_AD --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+         </dd>
+      </dl>
+      <dl>
+         <dt><label for="topicfirst_ad_text">{L_ACP_TOPICFIRST_AD_TEXT}{L_COLON}</label><br /><span>{L_ACP_TOPICFIRST_AD_TEXT_EXPLAIN}</span></dt>
+         <dd>
+			<textarea name="topicfirst_ad_text" id="topicfirst_ad_text" rows="6" cols="30" style="width: 95%;" onselect="storeCaret(this);" onclick="storeCaret(this);" onkeyup="storeCaret(this);" onfocus="initInsertions();" data-bbcode="true">{TOPICFIRST_AD_TEXT}</textarea>
+         </dd>
+      </dl>
+      <dl>
+         <dt><label for="enable_topicmid_ad">{L_ACP_ENABLE_TOPICMID_AD}{L_COLON}</label><br /><span>{L_ACP_ENABLE_TOPICMID_AD_EXPLAIN}</span></dt>
+         <dd>
+            <label><input type="radio" class="radio" name="enable_topicmid_ad" id="enable_topicmid_ad" value="1"<!-- IF ENABLE_TOPICMID_AD --> checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+            <label><input type="radio" class="radio" name="enable_topicmid_ad" value="0"<!-- IF not ENABLE_TOPICMID_AD --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+         </dd>
+      </dl>
+      <dl>
+         <dt><label for="topicmid_ad_text">{L_ACP_TOPICMID_AD_TEXT}{L_COLON}</label><br /><span>{L_ACP_TOPICMID_AD_TEXT_EXPLAIN}</span></dt>
+         <dd>
+			<textarea name="topicmid_ad_text" id="topicmid_ad_text" rows="6" cols="30" style="width: 95%;" onselect="storeCaret(this);" onclick="storeCaret(this);" onkeyup="storeCaret(this);" onfocus="initInsertions();" data-bbcode="true">{TOPICMID_AD_TEXT}</textarea>
+         </dd>
+      </dl>
+      <dl>
+         <dt><label for="enable_topiclast_ad">{L_ACP_ENABLE_TOPICLAST_AD}{L_COLON}</label><br /><span>{L_ACP_ENABLE_TOPICLAST_AD_EXPLAIN}</span></dt>
+         <dd>
+            <label><input type="radio" class="radio" name="enable_topiclast_ad" id="enable_topiclast_ad" value="1"<!-- IF ENABLE_TOPICLAST_AD --> checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+            <label><input type="radio" class="radio" name="enable_topiclast_ad" value="0"<!-- IF not ENABLE_TOPICLAST_AD --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+         </dd>
+      </dl>
+      <dl>
+         <dt><label for="topiclast_ad_text">{L_ACP_TOPICLAST_AD_TEXT}{L_COLON}</label><br /><span>{L_ACP_TOPICLAST_AD_TEXT_EXPLAIN}</span></dt>
+         <dd>
+			<textarea name="topiclast_ad_text" id="topiclast_ad_text" rows="6" cols="30" style="width: 95%;" onselect="storeCaret(this);" onclick="storeCaret(this);" onkeyup="storeCaret(this);" onfocus="initInsertions();" data-bbcode="true">{TOPICLAST_AD_TEXT}</textarea>
+         </dd>
+      </dl>
+   </fieldset>
+   
+   
+   <fieldset>
+      <legend>{L_ACP_ADSENSEADS_HEAD5}</legend>
+      <dl>
+         <dt><label for="enable_search_ad">{L_ACP_ENABLE_SEARCH_AD}{L_COLON}</label><br /><span>{L_ACP_ENABLE_SEARCH_AD_EXPLAIN}</span></dt>
+         <dd>
+            <label><input type="radio" class="radio" name="enable_search_ad" id="enable_search_ad" value="1"<!-- IF ENABLE_SEARCH_AD --> checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+            <label><input type="radio" class="radio" name="enable_search_ad" value="0"<!-- IF not ENABLE_SEARCH_AD --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+         </dd>
+      </dl>
+      <dl>
+         <dt><label for="search_ad_text">{L_ACP_SEARCH_AD_TEXT}{L_COLON}</label><br /><span>{L_ACP_SEARCH_AD_TEXT_EXPLAIN}</span></dt>
+         <dd>
+			<textarea name="search_ad_text" id="search_ad_text" rows="6" cols="30" style="width: 95%;" onselect="storeCaret(this);" onclick="storeCaret(this);" onkeyup="storeCaret(this);" onfocus="initInsertions();" data-bbcode="true">{SEARCH_AD_TEXT}</textarea>
+         </dd>
+      </dl>
+   </fieldset>
+   
+   <fieldset>
+      <legend>{L_ACP_SUBMIT_CHANGES}</legend>
+      <p class="submit-buttons">
+         <input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+         <input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
+      </p>
+      {S_FORM_TOKEN}
+   </fieldset>
+
+</form>
+
+<!-- INCLUDE overall_footer.html -->

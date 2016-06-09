@@ -1,0 +1,26 @@
+<!-- IF (U_SEE_ADS and ENABLE_ADBLOCK_WARN) and not (ENABLE_TOTAL_TOPIC_BLOCK and S_VIEWTOPIC) -->
+<!-- IF (ENABLE_ADSENSE_TESTMODE and U_ACP) or not ENABLE_ADSENSE_TESTMODE -->
+<script>
+$(document).ready(function() {
+if($("#gandalfads").outerHeight() === 0)
+$("#displaywise").html("<div class='panel noscriptcss noscriptcssresponsive'><p class='warntext'><!-- IF S_USER_LOGGED_IN --><strong>{S_USERNAME}</strong>, <!-- ENDIF -->{ADBLOCK_WARN_TEXT}</p></div>").show();
+}); 
+</script>
+<!-- ENDIF -->
+<!-- ENDIF -->
+<!-- IF (U_SEE_ADS and ENABLE_TOTAL_TOPIC_BLOCK and S_VIEWTOPIC) -->
+<!-- IF (ENABLE_ADSENSE_TESTMODE and U_ACP) or not ENABLE_ADSENSE_TESTMODE -->
+<script>
+$(document).ready(function() {
+if($("#gandalfads").outerHeight() === 0)
+$("#crapblock").css("display","none");
+}); 
+</script>
+<script>
+$(document).ready(function() {
+if($("#gandalfads").outerHeight() === 0)
+$("#topicwise").html("<div class='panel noscriptcss noscriptcssresponsive'><p class='warntext'><!-- IF S_USER_LOGGED_IN --><strong>{S_USERNAME}</strong>, <!-- ENDIF -->{TOTAL_TOPIC_BLOCK_TEXT}</p></div>").show();
+}); 
+</script>
+<!-- ENDIF -->
+<!-- ENDIF -->

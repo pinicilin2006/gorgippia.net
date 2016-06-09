@@ -1,0 +1,64 @@
+/**
+*
+* @package phpBB Extension - Adsense & Ads
+* @copyright (c) 2016 Stoker http://www.phpbb3bbcodes.com
+* @license http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
+*
+*/
+
+.viewtopicads {
+	padding-top: 0;
+	padding-bottom: 0;
+	background-color: #f4f4f4;
+	overflow:hidden;
+}
+
+.adloader {
+	background: #f4f4f4 url('./images/loading.gif') no-repeat center center;
+}
+
+.searchads {
+	width: 100%;
+	margin-top: -2px;
+	margin-bottom: -2px;
+	background-color: #f4f4f4;
+	overflow:hidden;
+}
+
+.postsearchads {
+	background-color: #f4f4f4;
+	overflow:hidden;
+}
+
+.headerads {
+	text-align:center;
+	background-color:#f4f4f4;
+	margin-top:6px;
+	overflow:hidden;
+}
+
+.noscriptcss {
+	min-height:122px;
+	text-align: center;
+	padding-top: 0;
+	padding-bottom: 0;
+	background-color: #ECF3F7;
+	border: 2px solid red;
+}
+
+@media screen and (min-width: 700px) and (min-device-width: 700px){
+.noscriptcssresponsive {
+	background-image: url('./images/warnadbig.png'), url('./images/warnadbig.png');
+	background-position: right top, left top;
+	background-repeat: no-repeat;
+	padding-left: 130px;
+	padding-right: 130px;
+}
+}
+
+p.warntext {
+	font-size:2.4em; 
+	color:red;
+	padding-top: 10px;
+	margin-bottom: 0;
+}

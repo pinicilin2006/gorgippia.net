@@ -1,0 +1,30 @@
+{
+	"name": "stoker/adsenseads",
+	"type": "phpbb-extension",
+	"description": "This extension allows admins to use adsense and other ads all over the board",
+	"homepage": "http://www.phpbb3bbcodes.com",
+	"version": "1.0.3",
+	"time": "2016-01-30",
+	"keywords": ["phpbb", "extension", "adsenseads"],
+	"license": "GPL-2.0",
+	"authors": [
+		{
+			"name": "Stoker",
+			"homepage": "http://www.phpbb3bbcodes.com",
+			"email": "phpbb3bbcodes@gmail.com",
+			"role": "Extension Developer"
+		}
+	],
+	"require": {
+		"php": ">=5.3.3"
+	},
+	"require-dev": {
+		"phpbb/epv": "dev-master"
+	},
+	"extra": {
+		"display-name": "Adsense & Ads",
+		"soft-require": {
+			"phpbb/phpbb": ">=3.1.4-RC1,<3.2.*@dev"
+		}
+	}
+}
