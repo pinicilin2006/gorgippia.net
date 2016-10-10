@@ -20,3 +20,4 @@ Disallow: /memberlist.php
 Clean-param: sid /
 Clean-param: f&hilit /viewtopic.php
 Crawl-delay: 10
+Sitemap: http://gorgippia.net/sitemap.xml
